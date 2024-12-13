@@ -1,7 +1,7 @@
 <script lang="ts">
     import { Container, Header, Image } from "svelte-fomantic-ui";
 
-    import reality2bee from "../assets/reality2 enabled.png"
+    import reality2bee from "../assets/reality2_big_bee.png"
 
     export let page = "start";
     
