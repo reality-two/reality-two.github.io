@@ -11,8 +11,6 @@
     <Header ui h2 inverted>Welcome to Reality2.</Header>
     <Header ui h3 inverted>A new framework for truly assistive technologies.</Header>
     {#if page==="start"}
-        <centered>
-            <Image ui src={reality2bee}/>
-        </centered> 
+        <Image ui src={reality2bee} style="width:100%"/>
     {/if}
 </Container>
