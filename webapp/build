@@ -1,3 +1,4 @@
 yarn build
+rm -rf ../assets
 cp -R dist/* ..
 
