@@ -1,21 +1,17 @@
 <script lang="ts">
     import { Container, Header, Column, Image, Link } from "svelte-fomantic-ui";
-    import reality2 from "../assets/reality2 enabled.png"
 
     export let page = "start";
 </script>
 
 <Container ui grid style="padding-top:50px;min-height:200px;padding-bottom:50px;">
-    <Column four wide>
-        <Image ui src={reality2}/>
-        <span style="font-style:italic">Dr. Roy C. Davies</span>
-    </Column>
-    <Column twelve wide justified>
-        <Header ui h4 inverted>Why?</Header>
-        The paradox of security vs usability has forced us down a path of increasing complexity in digital technologies.  Contextual information can help solve this conundrum, but how to do this securely?
-        We contemplated this problem, and decided that a new usability metaphor was required - the Objects and Actors metaphor, along with a 'local-first' policy to data storage.
+    <Column sixteen wide justified>
+        <div style="position:relative;width:100%;height:0;padding-bottom:56.25%;"><iframe allow="clipboard-write" allowfullscreen style="position:absolute; width: 100%; height: 100%;border: solid 1px #333;" src="https://www.beautiful.ai/embed/-OE5XpDfj3IJ5GRZ7kjE?utm_source=beautiful_player&utm_medium=embed&utm_campaign=-OC4jCsrLH2JEdabQJM9"></iframe><a href="https://www.beautiful.ai/embed/-OE5XpDfj3IJ5GRZ7kjE?utm_source=beautiful_player&utm_medium=embed&utm_campaign=-OC4jCsrLH2JEdabQJM9">View Reality2 Beautifully Usable on Beautiful.ai</a></div>
     </Column>
     <Column sixteen wide justified>
-        <Header ui h4 inverted>How?</Header>
+        <div style="position:relative;width:100%;height:0;padding-bottom:56.25%;"><iframe allow="clipboard-write" allowfullscreen style="position:absolute; width: 100%; height: 100%;border: solid 1px #333;" src="https://www.beautiful.ai/embed/-OE5nxg8btF1lkhqHlad?utm_source=beautiful_player&utm_medium=embed&utm_campaign=-NygD8JnBqxcSbK-d-92"></iframe><a href="https://www.beautiful.ai/embed/-OE5nxg8btF1lkhqHlad?utm_source=beautiful_player&utm_medium=embed&utm_campaign=-NygD8JnBqxcSbK-d-92">View Reality2 wanderland example on Beautiful.ai</a></div>
+    </Column>
+    <Column sixteen wide justified>
+        <div style="position:relative;width:100%;height:0;padding-bottom:56.25%;"><iframe allow="clipboard-write" allowfullscreen style="position:absolute; width: 100%; height: 100%;border: solid 1px #333;" src="https://www.beautiful.ai/embed/-OE5oHu1CGJrLCUdzYW8?utm_source=beautiful_player&utm_medium=embed&utm_campaign=-Nz4p5mn5qWvcsa79tE8"></iframe><a href="https://www.beautiful.ai/embed/-OE5oHu1CGJrLCUdzYW8?utm_source=beautiful_player&utm_medium=embed&utm_campaign=-Nz4p5mn5qWvcsa79tE8">View Reality2 IoT and Digital Twin example on Beautiful.ai</a></div>
     </Column>
 </Container>
