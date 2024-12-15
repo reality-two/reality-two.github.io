@@ -7,7 +7,7 @@
     import About from "./lib/About.svelte";
     import Contact from "./lib/Contact.svelte";
     import ObjectsAndActors from "./lib/ObjectsAndActors.svelte";
-    import CalmTechnology from "./lib/CalmTechnology.svelte";
+    import TransientNetworks from "./lib/TransientNetworks.svelte";
     import Sentants from "./lib/Sentants.svelte";
     import Information from "./lib/Information.svelte";
 
@@ -29,8 +29,8 @@
             <Sentants {page}/>
         {:else if page==="information"}
             <Information {page}/>
-        {:else if page==="calmtechnology"}
-            <CalmTechnology {page}/>
+        {:else if page==="transientnetworks"}
+            <TransientNetworks {page}/>
         {:else if page==="contact"}
             <Contact {page}/>
         {/if}

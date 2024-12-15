@@ -15,7 +15,7 @@
         <Divider ui/>
         <Text ui big>Reality2 combines the immersive power of Mixed Reality with the seamless integration of Calm Technology, to create a harmonious blend of digital and physical worlds that respects privacy.</Text>
         <Divider ui/>
-        <Text ui big>It enables intuitive, context-aware interactions, allowing people to engage naturally with virtual and real elements, enhancing experiences whilst encouraging full presence in their surroundings.</Text>
+        <Text ui big>It enables intuitive, context-aware interactions, allowing people to engage naturally with virtual and real things, enhancing experiences whilst encouraging full presence in their surroundings.</Text>
         <Divider ui/>
     </Column>
     <Column sixteen wide justified>
