@@ -13,7 +13,7 @@
     <Column sixteen wide justified>
         <Divider ui/>
         <Text ui large>
-            Reality2 is opensource, with a dual license.  You can use it for non-commercial applications for free (as is - no liabilities accepted), or commercially.  For commercial applications, please contact us at <a href="mailto:roy@reality2.ai">roy@reality2.ai</a> and we can work out terms.
+            Reality2 is opensource, with a dual license.  You can use it for non-commercial applications for free (as is - no liabilities accepted), or commercially.  For commercial applications, please contact us at <a href="mailto:contact@reality2.ai">contact@reality2.ai</a> and we can work out terms.
         </Text>
         <Divider ui/>
         <Text ui large>
@@ -49,6 +49,20 @@
             <Table_Row>
                 <Table_Col right aligned>Default Sentants WebApp <Icon ui gamepad/></Table_Col>
                 <Table_Col><Link href="https://github.com/reality-two/reality2-node-core-elixir/tree/main/web/sentants" target="_blank">https://github.com/reality-two/reality2-node-core-elixir/tree/main/web/sentants</Link></Table_Col>
+            </Table_Row>
+        </Table_Body>
+    </Table>
+    <Column sixteen wide justified>
+        <Divider ui/>
+        <Text ui large>
+            If you are curious about how this website was created, it is a static site using Svelte and the Fomantic UI framework, with Vite as the build framework.  It is hosted on github.io.
+        </Text>
+    </Column>
+    <Table ui inverted centered huge>
+        <Table_Body>
+            <Table_Row>
+                <Table_Col right aligned>Reality2 Website <Icon ui globe/></Table_Col>
+                <Table_Col><Link href="https://github.com/reality-two/reality-two.github.io" target="_blank">https://github.com/reality-two/reality-two.github.io</Link></Table_Col>
             </Table_Row>
         </Table_Body>
     </Table>
