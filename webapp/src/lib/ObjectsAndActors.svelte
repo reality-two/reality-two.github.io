@@ -11,7 +11,7 @@
     <Column sixteen wide justified>
         <Divider ui/>
         <Text ui large>
-        We humans build <Link href="https://simplyputpsych.co.uk/psych-101-1/what-is-a-schema-in-psychology" target="_blank">cognitive frameworks</Link> in our minds to represent and help understand the complexities of the world around us.  These simplified representations of reality help us to explain our observations and are constantly being revised and adapted as new information comes to light.
+        We humans build <Link href="https://simplyputpsych.co.uk/psych-101-1/what-is-a-schema-in-psychology" target="_blank">cognitive frameworks</Link> in our minds to represent and help understand the complexities of the world around us.  These simplified representations of reality are used to explain our observations and are constantly being revised and adapted as new information comes to light.
         </Text>
         <Divider ui/>
         <Text ui large>

@@ -7,7 +7,7 @@
     
 </script>
 
-<Container ui grid style="padding-top:50px;min-height:200px;padding-bottom:50px;">
+<Container ui grid stackable style="padding-top:50px;min-height:200px;padding-bottom:50px;">
     <Column seven wide>
         <Image ui src={reality2bee}/>
     </Column>
