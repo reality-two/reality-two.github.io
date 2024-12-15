@@ -32,6 +32,10 @@
                 <Table_Col right aligned>IOT WebApp Demo <Icon ui gamepad/></Table_Col>
                 <Table_Col><Link href="https://github.com/reality-two/reality2-webapp-iotdemo" target="_blank">https://github.com/reality-two/reality2-webapp-iotdemo</Link></Table_Col>
             </Table_Row>
+            <Table_Row>
+                <Table_Col right aligned>Default Sentants WebApp <Icon ui gamepad/></Table_Col>
+                <Table_Col><Link href="https://github.com/reality-two/reality2-node-core-elixir/tree/main/web/sentants" target="_blank">https://github.com/reality-two/reality2-node-core-elixir/tree/main/web/sentants</Link></Table_Col>
+            </Table_Row>
         </Table_Body>
     </Table>
 </Container>
