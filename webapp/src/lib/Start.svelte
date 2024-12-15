@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { Container, Header, Image, Column, Text, Divider } from "svelte-fomantic-ui";
+    import { Container, Image, Column, Text, Divider } from "svelte-fomantic-ui";
 
     import reality2bee from "../assets/reality2_big_bee.png"
 

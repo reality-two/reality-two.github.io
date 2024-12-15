@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { Container, Header, Column, Image, Link } from "svelte-fomantic-ui";
+    import { Container, Column } from "svelte-fomantic-ui";
 
     export let page = "start";
 </script>

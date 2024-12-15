@@ -1,14 +1,15 @@
 <script lang="ts">
-    import {Button, Menu, Container, Link, Item, Segment, Header, Table, Table_Body, Table_Col, Table_Row, Icon, Message, Content, Column, Image, Labels, Label } from 'svelte-fomantic-ui';
+    import { Segment } from 'svelte-fomantic-ui';
 
     import MainMenu from "./lib/MainMenu.svelte";
 
     import Start from "./lib/Start.svelte";
     import About from "./lib/About.svelte";
-    import StrongIdeas from "./lib/StrongIdeas.svelte";
-    import QuadrupleDiamond from "./lib/QuadrupleDiamond.svelte";
-    import Code from "./lib/Code.svelte";
     import Contact from "./lib/Contact.svelte";
+    import ObjectsAndActors from "./lib/ObjectsAndActors.svelte";
+    import CalmTechnology from "./lib/CalmTechnology.svelte";
+    import Sentants from "./lib/Sentants.svelte";
+    import Documentation from "./lib/Documentation.svelte";
 
     let page = "start";
 </script>
@@ -22,12 +23,14 @@
             <Start {page}/>
         {:else if page==="about"}
             <About {page}/>
-        {:else if page==="strong_ideas"}
-            <StrongIdeas {page}/>
-        {:else if page==="quadruple"}
-            <QuadrupleDiamond {page}/>
-        {:else if page==="code"}
-            <Code {page}/>
+        {:else if page==="objectsandactors"}
+            <ObjectsAndActors {page}/>
+        {:else if page==="sentants"}
+            <Sentants {page}/>
+        {:else if page==="documentation"}
+            <Documentation {page}/>
+        {:else if page==="calmtechnology"}
+            <CalmTechnology {page}/>
         {:else if page==="contact"}
             <Contact {page}/>
         {/if}
