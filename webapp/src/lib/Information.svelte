@@ -17,7 +17,7 @@
         </Text>
         <Divider ui/>
         <Text ui large>
-            Presently (as of December, 2024), Reality2 is in late Alpha.  This means that it is not complete, will have bugs, aspects may change suddenly, and it is not recommended you use it for mission critical applications.  That said, we encourage you to have a go, and then let us know how it went.
+            Presently (as of December, 2024), Reality2 is in early Beta.  This means that it is not complete, will have bugs, aspects may change suddenly and without warning, and it is not recommended you use it for mission-critical applications.  That said, we encourage you to have a go, and then let us know how it went.
         </Text>
         <Divider ui/>
         <Text ui large>
