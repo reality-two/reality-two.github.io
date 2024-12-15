@@ -9,7 +9,7 @@
     import ObjectsAndActors from "./lib/ObjectsAndActors.svelte";
     import CalmTechnology from "./lib/CalmTechnology.svelte";
     import Sentants from "./lib/Sentants.svelte";
-    import Documentation from "./lib/Documentation.svelte";
+    import Information from "./lib/Information.svelte";
 
     let page = "start";
 </script>
@@ -27,8 +27,8 @@
             <ObjectsAndActors {page}/>
         {:else if page==="sentants"}
             <Sentants {page}/>
-        {:else if page==="documentation"}
-            <Documentation {page}/>
+        {:else if page==="information"}
+            <Information {page}/>
         {:else if page==="calmtechnology"}
             <CalmTechnology {page}/>
         {:else if page==="contact"}
