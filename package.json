@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "reveal": "^0.0.4",
+    "svelte-slideshow": "^0.0.1-docs"
+  }
+}
