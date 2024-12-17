@@ -11,6 +11,8 @@
     import Sentants from "./lib/Sentants.svelte";
     import Information from "./lib/Information.svelte";
 
+    const allImages = import.meta.glob('/src/assets/**/*.png', { eager: true, as: 'url' });
+
     let page = "start";
 </script>
 
@@ -20,9 +22,9 @@
         <MainMenu bind:page/>
 
         {#if page==="start"}
-            <Start {page}/>
+            <Start {page} {allImages}/>
         {:else if page==="about"}
-            <About {page}/>
+            <About {page} {allImages}/>
         {:else if page==="objectsandactors"}
             <ObjectsAndActors {page}/>
         {:else if page==="sentants"}

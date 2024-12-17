@@ -6,6 +6,8 @@
 
     export let page = "start";
 
+    export let allImages: any;
+
     let counter = 0;
     
 </script>
@@ -21,4 +23,4 @@
         <Divider ui/>
     </Column>
 </Container>
-<Slidedeck folder="digital_glue"/>
+<Slidedeck folder="digital_glue" {allImages}/>

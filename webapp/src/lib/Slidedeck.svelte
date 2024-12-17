@@ -1,10 +1,11 @@
 <script lang="ts">
     import { Container, Image, Column, Text, Divider, Button, Icon } from "svelte-fomantic-ui";
 
+    export let allImages: any;
     export let folder="";
 
     // Import all images from the directory
-    const allImages = import.meta.glob('/src/assets/**/*.png', { eager: true, as: 'url' });
+    // const allImages = import.meta.glob('/src/assets/**/*.png', { eager: true, as: 'url' });
 
     // Function to filter images based on a dynamic folder name
     function getImagesForFolder(folderName) {
@@ -20,8 +21,6 @@
 </script>
 
 <Container ui grid style="padding-top:20px;min-height:200px;padding-bottom:0px;">
-
-<!-- <Container ui grid> -->
     <Column sixteen wide style="padding-bottom: 0px;">
         <Image ui fluid src={images[counter]} />
     </Column>

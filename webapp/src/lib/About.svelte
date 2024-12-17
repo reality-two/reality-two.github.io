@@ -5,11 +5,13 @@
 
 
     export let page = "start";
+    export let allImages: any;
+
 </script>
 
-<Slidedeck folder="beautifully_usable"/>
+<Slidedeck folder="beautifully_usable" {allImages}/>
 
-<Slidedeck folder="wanderland"/>
+<Slidedeck folder="wanderland" {allImages}/>
 
-<Slidedeck folder="iot"/>
+<Slidedeck folder="iot" {allImages}/>
 
