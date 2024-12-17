@@ -55,7 +55,7 @@
     <Column sixteen wide justified>
         <Divider ui/>
         <Text ui large>
-            If you are curious about how this website was created, it is a static site using Svelte and the Fomantic UI framework, with Vite as the build framework.  It is hosted on github.io.
+            If you are curious about how this website was created, it is a static site created using Svelte, with the graphics library Fomantic UI using the vite framework.  It is hosted on github.io.
         </Text>
     </Column>
     <Table ui inverted centered huge>

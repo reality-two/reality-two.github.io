@@ -11,7 +11,7 @@
     let counter = 0;
     
 </script>
-<Container ui grid stackable style="padding-top:50px;min-height:200px;padding-bottom:50px;">
+<Container ui grid stackable style="padding-top:50px;min-height:200px;padding-bottom:0px;">
     <Column seven wide>
         <Image ui src={reality2bee}/>
     </Column>
