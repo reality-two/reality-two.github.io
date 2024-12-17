@@ -22,10 +22,12 @@
 
 <Container ui style="padding-top:20px;min-height:200px;padding-bottom:0px;">
     <Column style="padding-bottom: 0px;">
-        <Image ui fluid src={images[counter]} />
+        <Button ui image on:click={() => counter = Math.min(images.length-1, (counter + 1))} style="padding: 0px;">
+            <Image ui fluid src={images[counter]}/>
+        </Button>
     </Column>
     <Column center aligned>
-        <Buttons ui small basic>
+        <Buttons ui basic>
             <Button ui grey icon on:click={() => counter = Math.max(0, (counter - 1))}>
                 <Icon angle left grey/>
             </Button>
