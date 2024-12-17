@@ -23,4 +23,4 @@
         <Divider ui/>
     </Column>
 </Container>
-<Slidedeck folder="digital_glue" {allImages}/>
+<Slidedeck folder="digital_glue" link="https://www.beautiful.ai/player/-O7al3iulcpXDvP26FJH" {allImages}/>

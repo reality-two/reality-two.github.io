@@ -1,8 +1,10 @@
 <script lang="ts">
     import { Container, Image, Column, Text, Buttons, Button, Icon } from "svelte-fomantic-ui";
+    import Link from "svelte-fomantic-ui/src/lib/elements/Link.svelte";
 
     export let allImages: any;
     export let folder="";
+    export let link="";
 
     // Import all images from the directory
     // const allImages = import.meta.glob('/src/assets/**/*.png', { eager: true, as: 'url' });
@@ -53,6 +55,13 @@
             <Button ui grey icon disabled={counter == (images.length-1)} on:click={() => counter = Math.min(images.length-1, (counter + 1))}>
                 <Icon angle right grey/>
             </Button>
+            {#if link != ""}
+                <Button ui grey icon>
+                    <Link ui grey href={link} target="_blank" alt="original slidedeck">
+                        <Icon expand/>
+                    </Link>
+                </Button>
+            {/if}
         </Buttons>
     </Column>
 </Container>
