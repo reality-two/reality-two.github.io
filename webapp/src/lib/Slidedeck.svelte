@@ -31,7 +31,7 @@
             <Button ui grey icon on:click={() => counter = Math.max(0, (counter - 1))}>
                 <Icon angle left grey/>
             </Button>
-            <Button ui blue><Text ui grey>{counter + 1} of {images.length}</Text></Button>
+            <Button ui blue on:click={() => counter = 0}><Text ui grey>{counter + 1} of {images.length}</Text></Button>
             <Button ui grey icon on:click={() => counter = Math.min(images.length-1, (counter + 1))}>
                 <Icon angle right grey/>
             </Button>
