@@ -6,7 +6,7 @@
 
 <Container ui grid style="padding-top:50px;min-height:200px;padding-bottom:50px;">
     <Column sixteen wide centered>
-        <Text ui big>Reality2, The framework for the Objects and Actors Metaphor.</Text>
+        <Text ui big>Reality2 - The framework for the Objects and Actors Metaphor.</Text>
     </Column>
     <Column sixteen wide justified>
         <Divider ui/>

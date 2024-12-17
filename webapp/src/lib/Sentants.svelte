@@ -36,8 +36,9 @@
         </Text>
         <Divider ui/>
     </Column>
+    <Column sixteen wide centered>
+        <Text ui big>Sentants intelligently act on your behalf without giving away too much.</Text>
+    </Column>
 </Container>
-<Column sixteen wide centered>
-    <Text ui big>Sentants intelligently act on your behalf without giving away too much.</Text>
-</Column>
+
 

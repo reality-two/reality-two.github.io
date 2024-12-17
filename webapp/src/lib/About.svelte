@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { Container, Column } from "svelte-fomantic-ui";
+    import { Container, Column, Text } from "svelte-fomantic-ui";
 
     import Slidedeck from "./Slidedeck.svelte";
 
