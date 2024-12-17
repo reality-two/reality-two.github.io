@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { Container, Image, Column, Text, Divider, Button, Icon } from "svelte-fomantic-ui";
+    import { Container, Image, Column, Text, Buttons, Button, Icon } from "svelte-fomantic-ui";
 
     export let allImages: any;
     export let folder="";
@@ -20,29 +20,19 @@
 
 </script>
 
-<Container ui grid style="padding-top:20px;min-height:200px;padding-bottom:0px;">
-    <Column sixteen wide style="padding-bottom: 0px;">
+<Container ui style="padding-top:20px;min-height:200px;padding-bottom:0px;">
+    <Column style="padding-bottom: 0px;">
         <Image ui fluid src={images[counter]} />
     </Column>
-    <Column three wide></Column>
-    <Column two wide>
-        <Button ui icon basic inverted on:click={() => counter = Math.max(0, (counter - 1))}>
-            <Icon angle left/>
-        </Button>
+    <Column center aligned>
+        <Buttons ui small basic>
+            <Button ui grey icon on:click={() => counter = Math.max(0, (counter - 1))}>
+                <Icon angle left grey/>
+            </Button>
+            <Button ui blue><Text ui grey>{counter + 1} of {images.length}</Text></Button>
+            <Button ui grey icon on:click={() => counter = Math.min(images.length-1, (counter + 1))}>
+                <Icon angle right grey/>
+            </Button>
+        </Buttons>
     </Column>
-    <Column two wide style="padding-top: 20px; text-align:right;">
-        <Text ui large style="text-align:right;">{counter+1}</Text>
-    </Column>
-    <Column one wide style="padding-top: 20px; text-align:center;">
-        <Text ui large>of</Text>
-    </Column>
-    <Column two wide style="padding-top: 20px; text-align:left;">
-        <Text ui large>{images.length}</Text>
-    </Column>
-    <Column two wide>
-        <Button ui icon basic inverted on:click={() => counter = Math.min(images.length-1, (counter + 1))}>
-            <Icon angle right/>
-        </Button>
-    </Column>
-    <Column four wide></Column>
 </Container>

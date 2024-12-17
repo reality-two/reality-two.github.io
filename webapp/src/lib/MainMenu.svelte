@@ -4,7 +4,7 @@
     export let page = "start";
 </script>
 
-<Container ui>
+<Container ui stackable>
     <Menu ui large secondary inverted pointing stackable>
         <Link item active={page==="start"} blue={page==="start"} on:click={()=>page="start"}>Home</Link>
         <Link item active={page==="objectsandactors"} blue={page==="objectsandactors"} on:click={()=>page="objectsandactors"}>Objects and Actors</Link>
