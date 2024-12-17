@@ -59,10 +59,8 @@
                 <Icon angle right grey/>
             </Button>
             {#if link != ""}
-                <Button ui grey icon>
-                    <Link href={link} target="_blank" style="text-decoration: none; color: grey;" alt="original slidedeck">
-                        <Icon expand grey/>
-                    </Link>
+                <Button ui grey icon on:click={() => window.open(link, '_blank')}>
+                    <Icon expand grey/>
                 </Button>
             {/if}
         </Buttons>
