@@ -38,6 +38,6 @@
     </Column>
 </Container>
 <Column sixteen wide centered>
-    <Text ui big>Sentants can intelligently act on your behalf without giving away too much.</Text>
+    <Text ui big>Sentants intelligently act on your behalf without giving away too much.</Text>
 </Column>
 
