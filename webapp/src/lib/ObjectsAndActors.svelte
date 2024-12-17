@@ -11,7 +11,7 @@
     <Column sixteen wide justified>
         <Divider ui/>
         <Text ui large>
-            Reality2 imbues wearable and static devices with Sentient Digital Agent intelligence, enabling the private use of contextual information to empower adaptive and adaptable interactions, greatly simplifying usability to support the Objects and Actors Metaphor.
+            Reality2 imbues wearable and stationary devices with Sentient Digital Agent intelligence, enabling the private use of contextual information to empower adaptive and adaptable interactions, greatly simplifying usability to support the Objects and Actors Metaphor.
         </Text>
         <Divider ui/>
         <Text ui large>
