@@ -48,17 +48,20 @@
     </Column>
     <Column center aligned>
         <Buttons ui basic>
+            <Button ui grey icon disabled={counter == 0} on:click={() => counter = 0}>
+                <Icon angle double left grey/>
+            </Button>
             <Button ui grey icon disabled={counter == 0} on:click={() => counter = Math.max(0, (counter - 1))}>
                 <Icon angle left grey/>
             </Button>
-            <Button ui blue on:click={() => counter = 0}><Text ui grey>{counter + 1} of {images.length}</Text></Button>
+            <Button ui grey style="pointer-events: none; cursor: not-allowed;"><Text ui grey>{counter + 1} of {images.length}</Text></Button>
             <Button ui grey icon disabled={counter == (images.length-1)} on:click={() => counter = Math.min(images.length-1, (counter + 1))}>
                 <Icon angle right grey/>
             </Button>
             {#if link != ""}
                 <Button ui grey icon>
-                    <Link ui grey href={link} target="_blank" alt="original slidedeck">
-                        <Icon expand/>
+                    <Link href={link} target="_blank" style="text-decoration: none; color: grey;" alt="original slidedeck">
+                        <Icon expand grey/>
                     </Link>
                 </Button>
             {/if}
