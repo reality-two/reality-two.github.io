@@ -24,19 +24,25 @@
     <Column sixteen wide style="padding-bottom: 0px;">
         <Image ui fluid src={images[counter]} />
     </Column>
-    <Column six wide></Column>
-    <Column one wide>
+    <Column three wide></Column>
+    <Column two wide>
         <Button ui icon basic inverted on:click={() => counter = Math.max(0, (counter - 1))}>
             <Icon angle left/>
         </Button>
     </Column>
-    <Column two wide style="padding-top: 20px;">
-        <Text ui large>{counter+1} of {images.length}</Text>
+    <Column two wide style="padding-top: 20px; text-align:right;">
+        <Text ui large style="text-align:right;">{counter+1}</Text>
     </Column>
-    <Column one wide>
+    <Column one wide style="padding-top: 20px; text-align:center;">
+        <Text ui large>of</Text>
+    </Column>
+    <Column two wide style="padding-top: 20px; text-align:left;">
+        <Text ui large>{images.length}</Text>
+    </Column>
+    <Column two wide>
         <Button ui icon basic inverted on:click={() => counter = Math.min(images.length-1, (counter + 1))}>
             <Icon angle right/>
         </Button>
     </Column>
-    <Column six wide></Column>
+    <Column four wide></Column>
 </Container>
