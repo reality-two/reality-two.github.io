@@ -1,7 +1,7 @@
 export default class GH {
     _secure: boolean = true;
     _graphql_http_url: string = "https://api.github.com/graphql";
-    _key: string = atob("Z2hwX0d4aVVhOE9rbnRMeGhaclhVdmYwdHhNdEJLWXdzRTBqVTRQQQ==");
+    _key: string = atob("Z2hwX1Axa2JUV2hVdXVON3lVZFNRcWNsVjdRTlNuUkgyeTFJdllTQw==");
 
     // ----------------------------------------------------------------------------------------------------
     // Constructor
