@@ -5,7 +5,7 @@
 
     import Start from "./lib/Start.svelte";
     import About from "./lib/About.svelte";
-    import Contact from "./lib/Contact.svelte";
+    import Marketplace from "./lib/Marketplace.svelte";
     import ObjectsAndActors from "./lib/ObjectsAndActors.svelte";
     import TransientNetworks from "./lib/TransientNetworks.svelte";
     import Sentants from "./lib/Sentants.svelte";
@@ -17,7 +17,7 @@
 </script>
 
 <main>
-    <Segment ui inverted vertical center aligned style="min-height:1000px">
+    <Segment ui inverted vertical center aligned style="min-height:2000px">
 
         <MainMenu bind:page/>
 
@@ -33,8 +33,8 @@
             <Information {page}/>
         {:else if page==="transientnetworks"}
             <TransientNetworks {page}/>
-        {:else if page==="contact"}
-            <Contact {page}/>
+        {:else if page==="marketplace"}
+            <Marketplace {page}/>
         {/if}
     </Segment>
 

@@ -11,9 +11,9 @@
         <Link item active={page==="sentants"} blue={page==="sentants"} on:click={()=>page="sentants"}>Sentient Agents</Link>
         <Link item active={page==="transientnetworks"} blue={page==="transientnetworks"} on:click={()=>page="transientnetworks"}>Transient Networks</Link>
         <Menu right>
+            <Link item active={page==="marketplace"} orange={page==="marketplace"} on:click={()=>page="marketplace"}>Marketplace</Link>
             <Link item active={page==="information"} green={page==="information"} on:click={()=>page="information"}>Guides</Link>
             <Link item active={page==="about"} green={page==="about"} on:click={()=>page="about"}>Case Studies</Link>
-            <!-- <Link item active={page==="contact"} green={page==="contact"} on:click={()=>page="contact"}>Contact</Link> -->
         </Menu>
     </Menu>
 </Container>
