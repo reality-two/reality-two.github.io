@@ -12,12 +12,9 @@
     let loading = true;
 
     github.listDirectory(dir)
-    .then((files) => {
-        let filenames = GH.JSONPath(files, "data.repository.object.entries");
-
+    .then((filenames) => {
         github.getInfo(dir)
-        .then(info => {
-            let fileinfo = JSON.parse(GH.JSONPath(info, "data.repository.object.text"));
+        .then(fileinfo => {
             loading = false;
 
             for (let i = 0; i < filenames.length; i++) {
