@@ -31,6 +31,16 @@ export default class GH {
             });
         });  
     }
+    getFile(dir: string, filename: string): Promise<object> {
+        return new Promise((resolve, reject) => {
+            this._rest_get ( this._getFile(dir, filename) ).then((data: any) => {
+                let content:any = atob(data.content);
+                resolve(content);
+            }, (error: any) => {
+                reject(error);
+            });
+        });  
+    }
     // ----------------------------------------------------------------------------------------------------
 
 
@@ -68,6 +78,10 @@ export default class GH {
 
     _getInfo(dir: string): string {
         return `/reality-two/reality2-definitions/contents/` + dir + `/info.json`;
+    }
+
+    _getFile(dir: string, filename: string): string {
+        return `/reality-two/reality2-definitions/contents/` + dir + `/` + filename;
     }
     // ----------------------------------------------------------------------------------------------------
 }

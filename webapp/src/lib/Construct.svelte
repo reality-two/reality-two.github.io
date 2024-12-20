@@ -109,10 +109,10 @@ Construct Swarms and Bees / Sentants
     // ------------------------------------------------------------------------------------------------
     // Exported parameters
     // ------------------------------------------------------------------------------------------------
-    export let sentantData: any[]|any = [];
     export let variables: any = {};
     export let savedState: any;
     export let construct_command: string = "";
+    export let incoming_data: [string, string] = ["json", ""];
     // ------------------------------------------------------------------------------------------------
 
 
@@ -372,6 +372,19 @@ Construct Swarms and Bees / Sentants
             }
         }
 
+        // If there was code passed in, load that
+        if (incoming_data[1] !== "") {
+            if (incoming_data[0] == "json") {
+                var newCode = JSON.parse(incoming_data[1]);
+                putIntoBackpack(newCode);
+            }
+            else if (incoming_data[0] == "yaml") {
+                var newCode = yaml.load(incoming_data[1]);
+                putIntoBackpack(newCode);
+            }
+            incoming_data = ["json", ""];
+        }
+
         // Update the Blockly workspace
         setTimeout(() => { Blockly.svgResize(workspace); }, 0);
 
@@ -482,7 +495,6 @@ Construct Swarms and Bees / Sentants
     }
     function saveBackpack() {
         const the_backpack: [any] = backpack.getContents();
-        console.log(the_backpack);
         return (the_backpack);
     }
     function loadBackpack(backpack_data: [any]) {
@@ -943,6 +955,6 @@ Construct Swarms and Bees / Sentants
     <Icon code></Icon>
 </Button>
 
-<Button ui icon large popup data-tooltip="Run the Swarm on the Reality2 node." data-position="top right" style="position: absolute; top: 500px; right: 45px; background-color: #696969" on:click={loadToNode}>
+<!-- <Button ui icon large popup data-tooltip="Run the Swarm on the Reality2 node." data-position="top right" style="position: absolute; top: 500px; right: 45px; background-color: #696969" on:click={loadToNode}>
     <Icon running></Icon>
-</Button>
+</Button> -->

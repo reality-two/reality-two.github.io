@@ -1,18 +1,20 @@
 <script lang="ts">
-    import { Header, Container, Label, Items, Item, Cards, Card, Image, Content, Link, Meta, Description, Extra } from "svelte-fomantic-ui";
+    import { Header, Container, Label, Items, Item, Button, Icon, Image, Content, Link, Divider, Description, Extra } from "svelte-fomantic-ui";
 
-    import GH from "./githubgraphql";
+    import GH from "./GithubAPI";
 
     export let extension = "bee";
     export let dir = "bees";
     export let default_image = "";
+    export let subpage = "";
+    export let incoming_data: [string, any] = ["json", ""];
 
     let github = new GH();
     let items = {};
     let loading = true;
 
     github.listDirectory(dir)
-    .then((filenames) => {
+    .then((filenames:any) => {
         github.getInfo(dir)
         .then(fileinfo => {
             loading = false;
@@ -34,6 +36,18 @@
             };
         });
     });
+
+function loadItem(name: string, type: string) {
+
+    console.log(name);
+
+    github.getFile(dir, name)
+    .then(filecontents => {
+        console.log(filecontents);
+        incoming_data = [type, filecontents];
+        subpage = "playground";
+    })
+}
 </script>
 
 <Container ui left aligned>
@@ -42,7 +56,7 @@
     {:else}
         <Items ui inverted left aligned divided>
             {#each Object.keys(items) as item_name}
-                <Item>
+                <Item style="position: relative;">
                     <Link ui small image target="_blank" href={items[item_name].link}>
                         <Image src={default_image}/>
                     </Link>
@@ -61,8 +75,13 @@
                             {/if}
                         </Extra>
                     </Content>
+
+                    <Button ui basic grey inverted icon style="position: absolute; top: 10px; right: 30px;" on:click={(event)=>{ loadItem(items[item_name].filename, items[item_name].type); }}>
+                        <Icon ui share/>
+                    </Button>
                 </Item>
             {/each}
         </Items>
+        <Divider ui/>
     {/if}
 </Container>
