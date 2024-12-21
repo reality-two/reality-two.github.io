@@ -138,7 +138,7 @@ Construct Swarms and Bees / Sentants
         codeOnPage: {}
     }
 
-    let r2_node = new R2("localhost", Number("4005"));
+    // let r2_node = new R2("localhost", Number("4005"));
 
     let blockly_definition = [
         reality2_swarm.shape,
@@ -557,55 +557,55 @@ Construct Swarms and Bees / Sentants
     // ------------------------------------------------------------------------------------------------
     // Load the current definition as a swarm or sentant
     // ------------------------------------------------------------------------------------------------
-    function loadToNode() {
-        firstWorkspaceBlock((definitionJSON: any) => {
-            if (Object.keys(definitionJSON).length !== 0) {
-                var definition = replaceVariables(JSON.stringify(definitionJSON), variables);
-                var isSentant = definitionJSON.hasOwnProperty("sentant");
-                var isSwarm = definitionJSON.hasOwnProperty("swarm");
+    // function loadToNode() {
+    //     firstWorkspaceBlock((definitionJSON: any) => {
+    //         if (Object.keys(definitionJSON).length !== 0) {
+    //             var definition = replaceVariables(JSON.stringify(definitionJSON), variables);
+    //             var isSentant = definitionJSON.hasOwnProperty("sentant");
+    //             var isSwarm = definitionJSON.hasOwnProperty("swarm");
 
-                if (isSentant) {
-                    var new_name = definitionJSON["sentant"]["name"];
-                    if (new_name) {
-                        r2_node.sentantGetByName(new_name)
-                        .then((result: any) => {
-                            r2_node.sentantUnload(R2.JSONPath(result, "sentantGet.id"))
-                            .then((_) => {
-                                r2_node.sentantLoad(definition)
-                                .then((_) => {
-                                    showMessage("Success", "Bee Loaded", "green");
-                                })
-                                .catch((error) => {
-                                    showMessage("Problem", "Error Loading", "red");
-                                })
-                            })
-                            .catch((error) => {
-                                showMessage("Problem", "Error Unloading", "red");
-                            })
-                        })
-                        .catch((error) => {
-                            r2_node.sentantLoad(definition)
-                            .then((_) => {
-                                showMessage("Success", "Bee Loaded", "green");
-                            })
-                        })
-                    }
-                }
-                else if(isSwarm) {
-                    r2_node.swarmLoad(definition)
-                    .then((_) => {
-                        showMessage("Success", "Swarm Loaded", "green");
-                    })
-                    .catch((error) => {
-                        showMessage("Problem", "Error Loading", "red");
-                    })
-                }
-            }
-            else {
-                showMessage("Status", "Nothing to load", "blue");
-            }
-        })
-    }
+    //             if (isSentant) {
+    //                 var new_name = definitionJSON["sentant"]["name"];
+    //                 if (new_name) {
+    //                     r2_node.sentantGetByName(new_name)
+    //                     .then((result: any) => {
+    //                         r2_node.sentantUnload(R2.JSONPath(result, "sentantGet.id"))
+    //                         .then((_) => {
+    //                             r2_node.sentantLoad(definition)
+    //                             .then((_) => {
+    //                                 showMessage("Success", "Bee Loaded", "green");
+    //                             })
+    //                             .catch((error) => {
+    //                                 showMessage("Problem", "Error Loading", "red");
+    //                             })
+    //                         })
+    //                         .catch((error) => {
+    //                             showMessage("Problem", "Error Unloading", "red");
+    //                         })
+    //                     })
+    //                     .catch((error) => {
+    //                         r2_node.sentantLoad(definition)
+    //                         .then((_) => {
+    //                             showMessage("Success", "Bee Loaded", "green");
+    //                         })
+    //                     })
+    //                 }
+    //             }
+    //             else if(isSwarm) {
+    //                 r2_node.swarmLoad(definition)
+    //                 .then((_) => {
+    //                     showMessage("Success", "Swarm Loaded", "green");
+    //                 })
+    //                 .catch((error) => {
+    //                     showMessage("Problem", "Error Loading", "red");
+    //                 })
+    //             }
+    //         }
+    //         else {
+    //             showMessage("Status", "Nothing to load", "blue");
+    //         }
+    //     })
+    // }
     // ------------------------------------------------------------------------------------------------
 
 

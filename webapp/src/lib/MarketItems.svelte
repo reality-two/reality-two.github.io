@@ -37,15 +37,39 @@
         });
     });
 
+
+function saveToFile(filename, content) {
+    // Create a new Blob with the content
+    const blob = new Blob([content], { type: 'text/plain' });
+    
+    // Create a temporary anchor element
+    const link = document.createElement('a');
+    link.href = URL.createObjectURL(blob);
+    link.download = filename;
+    
+    // Append the link to the body (required for some browsers)
+    document.body.appendChild(link);
+    
+    // Trigger the download
+    link.click();
+    
+    // Clean up by removing the link and releasing the Blob URL
+    document.body.removeChild(link);
+    URL.revokeObjectURL(link.href);
+}
+
 function loadItem(name: string, type: string) {
-
-    console.log(name);
-
     github.getFile(dir, name)
     .then(filecontents => {
-        console.log(filecontents);
         incoming_data = [type, filecontents];
         subpage = "playground";
+    })
+}
+
+function downloadItem(name: string, type: string) {
+    github.getFile(dir, name)
+    .then(filecontents => {
+        saveToFile(name, filecontents)
     })
 }
 </script>
@@ -76,8 +100,11 @@ function loadItem(name: string, type: string) {
                         </Extra>
                     </Content>
 
-                    <Button ui basic grey inverted icon style="position: absolute; top: 10px; right: 30px;" on:click={(event)=>{ loadItem(items[item_name].filename, items[item_name].type); }}>
+                    <!-- <Button ui basic grey inverted icon style="position: absolute; top: 10px; right: 30px;" on:click={(event)=>{ loadItem(items[item_name].filename, items[item_name].type); }}>
                         <Icon ui share/>
+                    </Button> -->
+                    <Button ui basic grey inverted icon style="position: absolute; top: 10px; right: 30px;" on:click={(event)=>{ downloadItem(items[item_name].filename, items[item_name].type); }}>
+                        <Icon ui download/>
                     </Button>
                 </Item>
             {/each}

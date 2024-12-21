@@ -22,12 +22,11 @@
     // Set up the sentant loading
     var loadedData: any[] = [];
     $: sentantData = loadedData;
-    let variables_loader: any;
     $: variables = {};
 
-    import R2 from "./reality2";
+    // import R2 from "./reality2";
 
-    let r2_node = new R2("localhost", Number("4005"));
+    // let r2_node = new R2("localhost", Number("4005"));
 
 </script>
 
@@ -42,9 +41,9 @@
         <Link item active={subpage==="bees"} blue={subpage==="bees"} on:click={()=>subpage="bees"}>Bees</Link>
         <Link item active={subpage==="antennae"} blue={subpage==="antennae"} on:click={()=>subpage="antennae"}>Antennae</Link>
         <!-- <Link item active={subpage==="behaviours"} blue={subpage==="behaviours"} on:click={()=>subpage="behaviours"}>Behaviours</Link> -->
-        <Menu right>
+        <!-- <Menu right>
             <Link item active={subpage==="playground"} green={subpage==="playground"} on:click={()=>subpage="playground"}>Playground</Link>
-        </Menu>
+        </Menu> -->
     </Menu>
     <Divider ui/>
 </Container>
@@ -58,10 +57,8 @@
 {:else if subpage == "behaviours"}
     <MarketItems extension="behaviour" dir="behaviours" default_image={reality2behaviours} bind:subpage bind:incoming_data/>
 {:else if subpage == "playground"}
-<!-- <Container ui left aligned style="padding: 0px; position: relative;"> -->
     <div style="padding: 0px; position: relative;">
-        <Construct bind:construct_command {r2_node} {sentantData} bind:savedState bind:variables  bind:incoming_data/>
+        <Construct bind:construct_command {sentantData} bind:savedState bind:variables  bind:incoming_data/>
     </div>
-<!-- </Container> -->
 {/if}
 
