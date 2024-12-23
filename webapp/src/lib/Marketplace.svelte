@@ -40,7 +40,7 @@
         <Link item active={subpage==="swarms"} blue={subpage==="swarms"} on:click={()=>subpage="swarms"}>Swarms</Link>
         <Link item active={subpage==="bees"} blue={subpage==="bees"} on:click={()=>subpage="bees"}>Bees</Link>
         <Link item active={subpage==="antennae"} blue={subpage==="antennae"} on:click={()=>subpage="antennae"}>Antennae</Link>
-        <!-- <Link item active={subpage==="behaviours"} blue={subpage==="behaviours"} on:click={()=>subpage="behaviours"}>Behaviours</Link> -->
+        <Link item active={subpage==="behaviours"} blue={subpage==="behaviours"} on:click={()=>subpage="behaviours"}>Behaviours</Link>
         <!-- <Menu right>
             <Link item active={subpage==="playground"} green={subpage==="playground"} on:click={()=>subpage="playground"}>Playground</Link>
         </Menu> -->
