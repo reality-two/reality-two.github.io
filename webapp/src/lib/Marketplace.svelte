@@ -8,11 +8,8 @@
 
     import MarketItems from "./MarketItems.svelte";
     import Construct from "./Construct.svelte";
-
-    import mermaid from "mermaid";
-
-    import HowTo from "../assets/marketplace-howto.svg";
-
+    import HowToDiagram from "./HowToDiagram.svelte";
+    
     export let page = "start";
 
     let subpage = "swarms";
@@ -24,30 +21,7 @@
 
     // Set up the sentant loading
     var loadedData: any[] = [];
-    $: sentantData = loadedData;
     $: variables = {};
-
-    // import R2 from "./reality2";
-
-    // let r2_node = new R2("localhost", Number("4005"));
-
-    // The default diagram
-    let diagram = `\
-        flowchart LR
-            A[Download Swarm, Bee, Antenna or Behaviour Definitions from below or from the <a href='https://github.com/reality-two/reality2-definitions'>R2-definitions Github</a>] --> B(Load onto Node using <a href='https://github.com/reality-two/reality2-documentation/blob/main/userfriendly/construct.md'>Construct</a> in default WebApp, <a href='https://github.com/reality-two/reality2-definitions/tree/main/client-python'>Python Client</a> or via <a href='https://github.com/reality-two/reality2-documentation/blob/main/instructions/4%20GraphQL/README.md'>GraphQL</a>)
-            B --> C(Tweak and combine with other Recipes to build desired behaviours and add authentication codes.)
-            C --> D(Set running on Node.)
-            D --> E(Interact using the <a href='https://github.com/reality-two/reality2-node-core-elixir/tree/main/web/sentants'>default WebApp</a>, <a href='https://github.com/reality-two/reality2-definitions/tree/main/client-python'>Python Client</a> or via <a href='https://github.com/reality-two/reality2-documentation/blob/main/instructions/4%20GraphQL/README.md'>GraphQL</a>)
-    `;
-
-    let container;
-
-    async function renderDiagram() {
-        const {svg} = await mermaid.render('mermaid', diagram)
-        container.innerHTML=svg;
-    }
-
-    renderDiagram()
 
 </script>
 
@@ -56,8 +30,7 @@
     <Text ui medium>Swarm, Bee, Antenna and Behaviour Definitions to build your own Sentants/Bees.</Text>
     <Divider ui/>
     <Container ui style="background-color: #888888;">
-        <span bind:this={container}/>
-         <!-- <Image ui src={HowTo} /> -->
+          <HowToDiagram/>
     </Container>
     <Divider ui/>
 </Container>
