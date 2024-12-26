@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { Container, Column, Text, Divider, Menu, Link, Header } from "svelte-fomantic-ui";
+    import { Container, Column, Text, Divider, Menu, Link, Image } from "svelte-fomantic-ui";
 
     import reality2bee from "../assets/bee.png";
     import reality2swarm from "../assets/swarm.png";
@@ -10,6 +10,8 @@
     import Construct from "./Construct.svelte";
 
     import mermaid from "mermaid";
+
+    import HowTo from "../assets/marketplace-howto.svg";
 
     export let page = "start";
 
@@ -55,6 +57,7 @@
     <Divider ui/>
     <Container ui style="background-color: #888888;">
         <span bind:this={container}/>
+         <!-- <Image ui src={HowTo} /> -->
     </Container>
     <Divider ui/>
 </Container>
