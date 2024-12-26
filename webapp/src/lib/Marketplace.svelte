@@ -28,15 +28,8 @@
 <Container ui style="padding-top:50px;padding-bottom:20px;">
     <Text ui big>The Reality2 Marketplace</Text><br/>
     <Text ui medium>Swarm, Bee, Antenna and Behaviour Definitions to build your own Sentants/Bees.</Text>
-    <Divider ui/>
-    <Container ui style="background-color: #888888;">
-          <HowToDiagram/>
-    </Container>
-    <Divider ui/>
-</Container>
-
-<Container ui stackable>
-    <Menu ui large inverted pointing stackable>
+    <Menu ui large inverted pointing stackable top attached blue style="border: none; border-width: 0px;"><HowToDiagram/></Menu>
+    <Menu ui large inverted pointing stackable bottom attached grey style="border: none; border-width: 0px;">
         <Link item active={subpage==="swarms"} blue={subpage==="swarms"} on:click={()=>subpage="swarms"}>Swarms</Link>
         <Link item active={subpage==="bees"} blue={subpage==="bees"} on:click={()=>subpage="bees"}>Bees</Link>
         <Link item active={subpage==="antennae"} blue={subpage==="antennae"} on:click={()=>subpage="antennae"}>Antennae</Link>
@@ -46,19 +39,18 @@
         </Menu> -->
     </Menu>
     <Divider ui/>
+
+    {#if subpage == "swarms"}
+        <MarketItems extension="swarm" dir="swarms" default_image={reality2swarm} bind:subpage bind:incoming_data/>
+    {:else if subpage == "bees"}
+        <MarketItems extension="bee" dir="bees" default_image={reality2bee} bind:subpage bind:incoming_data/>
+    {:else if subpage == "antennae"}
+        <MarketItems extension="antenna" dir="antennae" default_image={reality2antennae} bind:subpage bind:incoming_data/>
+    {:else if subpage == "behaviours"}
+        <MarketItems extension="behaviour" dir="behaviours" default_image={reality2behaviours} bind:subpage bind:incoming_data/>
+    {:else if subpage == "playground"}
+        <div style="padding: 0px; position: relative;">
+            <Construct bind:construct_command bind:savedState bind:variables  bind:incoming_data/>
+        </div>
+    {/if}
 </Container>
-
-{#if subpage == "swarms"}
-    <MarketItems extension="swarm" dir="swarms" default_image={reality2swarm} bind:subpage bind:incoming_data/>
-{:else if subpage == "bees"}
-    <MarketItems extension="bee" dir="bees" default_image={reality2bee} bind:subpage bind:incoming_data/>
-{:else if subpage == "antennae"}
-    <MarketItems extension="antenna" dir="antennae" default_image={reality2antennae} bind:subpage bind:incoming_data/>
-{:else if subpage == "behaviours"}
-    <MarketItems extension="behaviour" dir="behaviours" default_image={reality2behaviours} bind:subpage bind:incoming_data/>
-{:else if subpage == "playground"}
-    <div style="padding: 0px; position: relative;">
-        <Construct bind:construct_command bind:savedState bind:variables  bind:incoming_data/>
-    </div>
-{/if}
-
