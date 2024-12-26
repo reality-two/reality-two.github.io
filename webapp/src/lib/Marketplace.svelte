@@ -7,8 +7,9 @@
     import reality2behaviours from "../assets/behaviours.png";
 
     import MarketItems from "./MarketItems.svelte";
-
     import Construct from "./Construct.svelte";
+
+    import mermaid from "mermaid";
 
     export let page = "start";
 
@@ -28,11 +29,34 @@
 
     // let r2_node = new R2("localhost", Number("4005"));
 
+    // The default diagram
+    let diagram = `\
+        flowchart LR
+            A[Download Swarm, Bee, Antenna or Behaviour Recipe from below or from the <a href='https://github.com/reality-two/reality2-definitions'>R2-definitions Github</a>] --> B(Load onto Node using <a href='https://github.com/reality-two/reality2-documentation/blob/main/userfriendly/construct.md'>Construct</a> in default WebApp, <a href='https://github.com/reality-two/reality2-definitions/tree/main/client-python'>Python Client</a> or via <a href='https://github.com/reality-two/reality2-documentation/blob/main/instructions/4%20GraphQL/README.md'>GraphQL</a>)
+            B --> C(Tweak and combine with other Recipes to build desired behaviours and add authentication codes.)
+            C --> D(Set running on Node.)
+            D --> E(Interact using the <a href='https://github.com/reality-two/reality2-node-core-elixir/tree/main/web/sentants'>default WebApp</a>, <a href='https://github.com/reality-two/reality2-definitions/tree/main/client-python'>Python Client</a> or via <a href='https://github.com/reality-two/reality2-documentation/blob/main/instructions/4%20GraphQL/README.md'>GraphQL</a>)
+    `;
+
+    let container;
+
+    async function renderDiagram() {
+        const {svg} = await mermaid.render('mermaid', diagram)
+        container.innerHTML=svg;
+    }
+
+    renderDiagram()
+
 </script>
 
 <Container ui style="padding-top:50px;padding-bottom:20px;">
     <Text ui big>The Reality2 Marketplace</Text><br/>
-    <Text ui medium>Find Swarm, Bee and Antenna definitions to instruct your own Bees.</Text>
+    <Text ui medium>Swarm, Bee, Antenna abd Behaviour Recipes to build your own Sentants/Bees.</Text>
+    <Divider ui/>
+    <Container ui style="background-color: #888888;">
+        <span bind:this={container}/>
+    </Container>
+    <Divider ui/>
 </Container>
 
 <Container ui stackable>
@@ -58,7 +82,7 @@
     <MarketItems extension="behaviour" dir="behaviours" default_image={reality2behaviours} bind:subpage bind:incoming_data/>
 {:else if subpage == "playground"}
     <div style="padding: 0px; position: relative;">
-        <Construct bind:construct_command {sentantData} bind:savedState bind:variables  bind:incoming_data/>
+        <Construct bind:construct_command bind:savedState bind:variables  bind:incoming_data/>
     </div>
 {/if}
 

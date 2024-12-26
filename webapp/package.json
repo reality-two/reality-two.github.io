@@ -23,6 +23,7 @@
     "@blockly/workspace-backpack": "^6.0.12",
     "blockly": "^11.2.0",
     "js-yaml": "^4.1.0",
+    "mermaid": "^11.4.1",
     "svelte-fomantic-ui": "^0.3.4",
     "yaml": "^2.6.1"
   }
