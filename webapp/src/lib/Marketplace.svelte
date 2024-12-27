@@ -19,6 +19,17 @@
     var construct_command = "";
     let savedState = {};
 
+
+    let width;
+
+    // Bind the window's innerWidth to the width variable
+    $: window.addEventListener('resize', () => {
+        width = window.innerWidth;
+    });
+
+    // Set initial width
+    width = window.innerWidth;
+
     // Set up the sentant loading
     var loadedData: any[] = [];
     $: variables = {};
@@ -28,8 +39,10 @@
 <Container ui style="padding-top:50px;padding-bottom:20px;">
     <Text ui big>The Reality2 Marketplace</Text><br/>
     <Text ui medium>Swarm, Bee, Antenna and Behaviour Definitions to build your own Sentants/Bees.</Text>
-    <Menu ui large inverted pointing stackable top attached blue style="border: none; border-width: 0px;"><HowToDiagram/></Menu>
-    <Menu ui large inverted pointing stackable bottom attached grey style="border: none; border-width: 0px;">
+    <Menu ui centered large inverted top attached blue style="border: none; justify-content:center;">
+       <HowToDiagram {width}/>
+    </Menu>
+    <Menu ui large inverted pointing stackable bottom attached grey style="border: none; border-width: 0px; margin-top: -5px;">
         <Link item active={subpage==="swarms"} blue={subpage==="swarms"} on:click={()=>subpage="swarms"}>Swarms</Link>
         <Link item active={subpage==="bees"} blue={subpage==="bees"} on:click={()=>subpage="bees"}>Bees</Link>
         <Link item active={subpage==="antennae"} blue={subpage==="antennae"} on:click={()=>subpage="antennae"}>Antennae</Link>

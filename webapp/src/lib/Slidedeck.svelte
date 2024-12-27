@@ -1,6 +1,5 @@
 <script lang="ts">
     import { Container, Image, Column, Text, Buttons, Button, Icon } from "svelte-fomantic-ui";
-    import Link from "svelte-fomantic-ui/src/lib/elements/Link.svelte";
 
     export let allImages: any;
     export let folder="";

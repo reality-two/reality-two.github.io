@@ -78,7 +78,7 @@ function downloadItem(name: string, type: string) {
     {#if loading}
         <Message ui medium inverted>
             <Header ui h3 inverted>Loading...</Header>
-            If this seems to get stuck on 'Loading...', it is likely due to <a target="_blank" href="https://www.endorlabs.com/learn/how-to-get-the-most-out-of-github-api-rate-limits#github-rate-limit-brief-overview">Github Limitations in the use of the free API</a>.  You can download the Definitions from <a target="_blank" href="https://github.com/reality-two/reality2-definitions">the Github repository</a> instead.
+            If this seems to get stuck on 'Loading...', it is likely due to <a target="_blank" href="https://www.endorlabs.com/learn/how-to-get-the-most-out-of-github-api-rate-limits#github-rate-limit-brief-overview">Github Limitations in the use of the free API</a>.  You can download the Definitions from <a target="_blank" href="https://github.com/reality-two/reality2-definitions">the Github repository</a> instead, or wait an hour...
         </Message>
     {:else}
         <Items ui inverted left aligned divided>
