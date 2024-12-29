@@ -21,14 +21,15 @@
         <Text ui large>
             Each Sentant (or Bee) has a range of properties:
             <ul style="line-height: 1.4;">
-                <li><strong>Programmable</strong>: It can be customized to perform specific tasks.</li>
-                <li><strong>Immutable</strong>: Once created, it cannot be changed.</li>
-                <li><strong>Persistent</strong>: It continues to exist and function until removed.</li>
-                <li><strong>Unique</strong>: Each one is one-of-a-kind.</li>
-                <li><strong>Consistent</strong>: It behaves the same regardless of the visualizer.</li>
-                <li><strong>Context-Aware</strong>: It is aware of its environment and adapts accordingly.</li>
-                <li><strong>Opaque</strong>: Without your personal keys, the encryption restricts access.</li>
-                <li><strong>Interactive</strong>: Interaction is through sending messages and receiving signals.</li>
+                <li><strong>Immutable</strong>: Once created, its core cannot be changed.</li>
+                <li><strong>Programmable</strong>: It can be customized for specific tasks.</li>
+                <li><strong>Unique</strong>: Each one is distinct and one-of-a-kind.</li>
+                <li><strong>Consistent</strong>: It behaves the same no matter how it is viewed.</li>
+                <li><strong>Extensible</strong>: New features can be added through third-party plugins.</li>
+                <li><strong>Persistent</strong>: It remains active until it is removed.</li>
+                <li><strong>Interactive</strong>: It communicates by sending and receiving messages.</li>
+                <li><strong>Opaque</strong>: Without your personal keys, encryption keeps access limited.</li>
+                <li><strong>Adaptive</strong>: It understands its environment and adjusts accordingly.</li>
             </ul>
         </Text>
         <Divider ui/>
