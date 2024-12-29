@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { Segment } from 'svelte-fomantic-ui';
+    import { Segment, Message, Divider, Container } from 'svelte-fomantic-ui';
 
     import MainMenu from "./lib/MainMenu.svelte";
 
@@ -36,8 +36,15 @@
         {:else if page==="marketplace"}
             <Marketplace {page}/>
         {/if}
-    </Segment>
 
+        <Container ui>
+            <Divider ui/>
+            <Message ui small inverted centered>Copyright 2024 Reality2 and Dr. Roy C. Davies, all rights reserved</Message>
+            <Divider ui/>
+        </Container>
+
+
+    </Segment>
 </main>
 
 <style>
