@@ -8,8 +8,6 @@
     export let page = "start";
 
     export let allImages: any;
-
-    let counter = 0;
     
 </script>
 <Container ui grid stackable style="padding-top:50px;padding-bottom:0px;vertical-align:top;">
@@ -17,8 +15,8 @@
         <Column five wide>
             <Image ui src={reality2bee}/>
         </Column>
-        <Column eleven wide left style="border-top: 1px solid #4B6E8F; border-bottom: 1px solid #4B6E8F; padding-top: 20px; padding-bottom: 20px; text-align: justify;">
-            <Text ui big>Reality2 bridges the digital and physical worlds using Mixed Reality and Calm Technology.  We enable intuitive, context-aware interactions through Reality2-empowered every-day objects, devices, places and situations. The seamless experience enhances engagement and prioritizes privacy, whilst encouraging full presence in one’s surroundings and social interactions.</Text>
+        <Column eleven wide left style="border-top: 1px solid #4B6E8F; border-bottom: 1px solid #4B6E8F; padding-top: 20px; padding-bottom: 20px; text-align: justify; text-justify: inter-word;">
+            <Text ui big>Reality2 bridges the digital and physical worlds using Mixed Reality and Calm Technology, powered by sentient digital agents (Sentants). These agents enable intuitive, context-aware interactions through Reality2-empowered objects, places, and situations. This seamless experience enhances engagement, prioritizes privacy, and encourages full presence in one’s surroundings and social interactions.</Text>
         </Column>
     </Row>
     <Row>
