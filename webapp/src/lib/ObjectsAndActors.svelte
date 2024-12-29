@@ -11,6 +11,27 @@
     <Column sixteen wide justified>
         <Divider ui/>
         <Text ui large>
+            Reality2 enhances wearable and stationary devices with Sentient Digital Agent intelligence, using contextual information to create adaptive, intuitive interactions. This approach simplifies usability and supports the ‘Objects and Actors Metaphor.’
+        </Text>
+        <Divider ui/>
+        <Text ui large>
+            We humans naturally build mental frameworks to understand the complexities of the world around us. These simplified representations help us make sense of new information by drawing parallels with what we already know, often using metaphors. In the context of tools, these metaphors shape the interaction between designers and users.
+        </Text>
+        <Divider ui/>
+        <Text ui large>
+            Well-designed tools reflect human understanding and capabilities—this is the essence of ‘Calm Technology.’ Take a hammer, for example: its weight and shape naturally guide our actions without us having to think too much. This metaphor, embedded in physical tools, has been crucial in designing digital technologies as well.
+        </Text>
+        <Divider ui/>
+        <Text ui large>
+            Consider how most people don’t fully understand how a mobile phone works or the networks that power it. Yet, the device is intuitive to use. In computing, the Desktop Metaphor helped users visualize a computer’s functions through familiar concepts like icons and files. Mobile devices continue this with similar metaphors.
+        </Text>
+        <Divider ui/>
+        <Text ui large>
+            Now, with spatial computing and Mixed Reality, we may be outgrowing these traditional metaphors. As we use multiple devices throughout our day, interacting with them through natural language and gestures, we’re entering a new paradigm: the ‘Objects and Actors Metaphor.’ This shift reflects how technology seamlessly blends into our lives, making interactions feel as natural as engaging with the physical world.”
+        </Text>
+        <Divider ui/>
+        <!-- <Divider ui/>
+        <Text ui large>
             Reality2 imbues wearable and stationary devices with Sentient Digital Agent intelligence, enabling the private use of contextual information to empower adaptive and adaptable interactions, greatly simplifying usability to support the Objects and Actors Metaphor.
         </Text>
         <Divider ui/>
@@ -45,7 +66,7 @@
         <Text ui large>
             As people carry multiple devices with them, using them when out and about, with interaction via natural language and gestures; we are entering a new paradigm embodied by the 'Objects and Actors Metaphor'.  
         </Text>
-        <Divider ui/>
+        <Divider ui/> -->
     </Column>
     <Column sixteen wide centered>
         <Text ui big>As intuitive as picking up and throwing a ball; as human as having a conversation.</Text>
