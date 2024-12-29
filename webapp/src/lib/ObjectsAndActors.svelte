@@ -23,11 +23,11 @@
         </Text>
         <Divider ui/>
         <Text ui large>
-            Consider how most people don’t fully understand how a mobile phone works or the networks that power it. Yet, the device is intuitive to use. In computing, the Desktop Metaphor helped users visualize a computer’s functions through familiar concepts like icons and files. Mobile devices continue this with similar metaphors.
+            Consider that most people don’t fully understand how a mobile phone works or the networks that power it. Yet, the device is (mostly) intuitive to use. In computing, the Desktop Metaphor has helped users visualize a computer’s functions through familiar concepts like icons and files. Mobile devices (as portable computers) continue this with this metaphor.
         </Text>
         <Divider ui/>
         <Text ui large>
-            Now, with spatial computing and Mixed Reality, we may be outgrowing these traditional metaphors. As we use multiple devices throughout our day, interacting with them through natural language and gestures, we’re entering a new paradigm: the ‘Objects and Actors Metaphor.’ This shift reflects how technology seamlessly blends into our lives, making interactions feel as natural as engaging with the physical world.”
+            Now, with spatial computing and Mixed Reality, we are outgrowing these traditional metaphors. As we use multiple devices throughout our day, interacting with them through natural language and gestures, we’re entering a new paradigm: the ‘Objects and Actors Metaphor.’ This shift reflects how technology seamlessly blends into our lives, making interactions feel as natural as engaging with the physical world.
         </Text>
         <Divider ui/>
         <!-- <Divider ui/>

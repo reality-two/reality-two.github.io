@@ -15,23 +15,25 @@
             The core of Reality2 is built on Sentient Digital Agents, or ‘Sentants,’ which are small, independent elements that can sense the digital and physical environments around them. These Sentants, also known as ‘Bees,’ can work together in ‘Swarms’ to achieve complex tasks.        </Text>
         <Divider ui/>
         <Text ui large>
-            Sentants can be programmed with specific ‘Behaviours’ and have their functionality extended using ‘Plugins’ or ‘Antennae,’ continuing the bee metaphor. A key guideline is that data is stored close to its source (with encrypted backups as needed). This means your data is literally ‘on you’—in the devices you wear and carry. And don’t worry, if you lose these devices, others won’t be able to access your personal information.
+            Sentants can be programmed with specific ‘Behaviours’ and have their functionality extended using ‘Plugins’ or ‘Antennae,’ continuing the bee metaphor. A key principle is that data is stored close to its source (with encrypted backups elsewhere as needed). This means your data is literally ‘on you’—in the devices you wear and carry. But don’t worry, if you lose these devices, others won’t be able to access your personal information.
         </Text>
         <Divider ui/>
         <Text ui large>
             Each Sentant (or Bee) has a range of properties:
-            <ul>
+            <ul style="line-height: 1.4;">
                 <li><strong>Programmable</strong>: It can be customized to perform specific tasks.</li>
                 <li><strong>Immutable</strong>: Once created, it cannot be changed.</li>
                 <li><strong>Persistent</strong>: It continues to exist and function until removed.</li>
                 <li><strong>Unique</strong>: Each one is one-of-a-kind.</li>
                 <li><strong>Consistent</strong>: It behaves the same regardless of the visualizer.</li>
                 <li><strong>Context-Aware</strong>: It is aware of its environment and adapts accordingly.</li>
+                <li><strong>Opaque</strong>: Without your personal keys, the encryption restricts access.</li>
+                <li><strong>Interactive</strong>: Interaction is through sending messages and receiving signals.</li>
             </ul>
         </Text>
         <Divider ui/>
         <Text ui large>
-            Sentants are set up by loading a script onto a Reality2 Node. These scripts can be exchanged with others to share functionality, even building up entire libraries of capabilities. When Sentants work together in Swarms, they bring the ‘Objects and Actors’ metaphor to life, creating an emergent, dynamic experience in Reality2.
+            Sentants are set up by loading a script onto a Reality2 Node. These scripts can be exchanged with others to share functionality, even building up entire libraries of capabilities (see the Marketplace tab above). When Sentants work together in Swarms, they bring the ‘Objects and Actors’ metaphor to life, creating an emergent, dynamic experience in Reality2.
         </Text>
         <Divider ui/>
 
