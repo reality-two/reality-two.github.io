@@ -14,15 +14,11 @@
 </script>
 <Container ui grid stackable style="padding-top:50px;padding-bottom:0px;vertical-align:top;">
     <Row>
-        <Column seven wide>
+        <Column five wide>
             <Image ui src={reality2bee}/>
         </Column>
-        <Column nine wide left>
-            <Divider ui/>
-            <Text ui big>Reality2 combines the immersive power of Mixed Reality with the seamless integration of Calm Technology, to create a harmonious blend of digital and physical worlds that respect privacy.</Text>
-            <Divider ui/>
-            <Text ui big>It enables intuitive, context-aware interactions, allowing people to engage naturally with virtual and real things, enhancing experiences whilst encouraging full presence in their surroundings.</Text>
-            <Divider ui/>
+        <Column eleven wide left style="border-top: 1px solid #4B6E8F; border-bottom: 1px solid #4B6E8F; padding-top: 20px; padding-bottom: 20px; text-align: justify;">
+            <Text ui big>Reality2 bridges the digital and physical worlds using Mixed Reality and Calm Technology.  We enable intuitive, context-aware interactions through Reality2-empowered every-day objects, devices, places and situations. The seamless experience enhances engagement and prioritizes privacy, whilst encouraging full presence in one’s surroundings and social interactions.</Text>
         </Column>
     </Row>
     <Row>
