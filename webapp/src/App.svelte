@@ -39,7 +39,7 @@
 
         <Container ui>
             <Divider ui/>
-            <Message ui small inverted centered>Copyright 2024 Reality2 and Dr. Roy C. Davies, all rights reserved</Message>
+            <Message ui small inverted centered>© coypyright 2020-2025 Reality2 and Dr. Roy C. Davies. All rights reserved.</Message>
             <Divider ui/>
         </Container>
 
