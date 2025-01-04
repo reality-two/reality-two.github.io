@@ -16,7 +16,7 @@
             <Image ui src={reality2bee}/>
         </Column>
         <Column eleven wide justified style="border-top: 1px solid #4B6E8F; border-bottom: 1px solid #4B6E8F; padding-top: 20px; padding-bottom: 20px;">
-            <Text ui big>Reality2 connects the digital and physical worlds through Mixed Reality and Calm Technology, powered by sentient digital agents (Sentants). These enable intuitive, context-aware interactions with objects and virtual entities that blend into your environment, enhancing engagement, protecting privacy, and helping you stay present in your surroundings and social interactions.</Text>
+            <Text ui big>Reality2 connects the digital and physical worlds through Mixed Reality and Calm Technology, powered by sentient digital agents (Sentants). These enable intuitive, context-aware interactions with real objects and virtual entities that blend into your environment, enhancing engagement, protecting privacy, and helping you stay present in your surroundings and social interactions.</Text>
         </Column>
     </Row>
     <Row>
