@@ -6,12 +6,12 @@
 
 </script>
 
-<Container ui grid style="padding-top:20px;min-height:200px;padding-bottom:50px;">
-    <!-- <Column sixteen wide centered>
-        <Text ui big>Guides</Text>
-    </Column> -->
+<Container ui grid style="padding-top:50px;min-height:200px;padding-bottom:50px;">
+    <Column sixteen wide centered>
+        <Text ui big>Learn more about Reality2, build Nodes and define Sentant Swarms.</Text>
+    </Column>
     <Column sixteen wide justified>
-        <!-- <Divider ui/> -->
+        <Divider ui/>
         <Text ui large>
             Reality2 is opensource, with a dual license.  You can use it for non-commercial applications for free (as is - no liabilities accepted), or commercially.  For commercial applications, please contact us at <a href="mailto:contact@reality2.ai">contact@reality2.ai</a> and we can work out terms.
         </Text>
