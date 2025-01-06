@@ -73,7 +73,6 @@
             // subpage = "playground";
 
             code = filecontents;
-            console.log(filecontents);
             behavior("the_code", "show");
         })
     }
