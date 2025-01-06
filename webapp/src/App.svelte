@@ -11,9 +11,48 @@
     import Sentants from "./lib/Sentants.svelte";
     import Information from "./lib/Information.svelte";
 
+    import { onMount } from "svelte";
+    import { onDestroy } from "svelte";
+
     const allImages = import.meta.glob('/src/assets/**/*.png', { eager: true, as: 'url' });
 
     let page = "start";
+
+    $: pageHeight = '600px';
+
+    // ------------------------------------------------------------------------------------------------
+    // What to do whe the page is loaded
+    // ------------------------------------------------------------------------------------------------
+    onMount(() => {
+        // Add resize event listener
+        window.addEventListener("resize", updateHeight);
+
+        // Update the height for the first time
+        updateHeight();
+    });
+    // ------------------------------------------------------------------------------------------------
+
+
+
+    // ------------------------------------------------------------------------------------------------
+    // What to do when the page is removed
+    // ------------------------------------------------------------------------------------------------
+    onDestroy(() => {
+        window.removeEventListener("resize", updateHeight); 
+    });
+    // ------------------------------------------------------------------------------------------------
+
+
+
+    // ------------------------------------------------------------------------------------------------
+    // What to do when the window size is changed
+    // ------------------------------------------------------------------------------------------------
+    function updateHeight() {
+        const height = window.innerHeight - 90;
+
+        pageHeight = `${height - 30}px`;
+    }
+    // ------------------------------------------------------------------------------------------------
 </script>
 
 <main>
@@ -34,7 +73,7 @@
         {:else if page==="transientnetworks"}
             <TransientNetworks {page}/>
         {:else if page==="marketplace"}
-            <Marketplace {page}/>
+            <Marketplace {page} {pageHeight}/>
         {/if}
 
         <Container ui>

@@ -1,7 +1,10 @@
 <script lang="ts">
-    import { Header, Container, Label, Items, Item, Button, Icon, Message, Image, Content, Link, Divider, Description, Extra } from "svelte-fomantic-ui";
+    import { behavior, Header, Container, Label, Items, Item, Button, Icon, Message, Image, Content, Link, Divider, Description, Extra, Modal } from "svelte-fomantic-ui";
 
     import GH from "./GithubAPI";
+
+    //@ts-ignore
+    import yaml from 'js-yaml';
 
     export let extension = "bee";
     export let dir = "bees";
@@ -9,9 +12,14 @@
     export let subpage = "";
     export let incoming_data: [string, any] = ["json", ""];
 
+    export let pageHeight = '600px';
+
     let github = new GH();
     let items = {};
     let loading = true;
+
+    $: code = {};
+    $: showJSON = [];
 
     github.listDirectory(dir)
     .then((filenames:any) => {
@@ -38,40 +46,44 @@
     });
 
 
-function saveToFile(filename, content) {
-    // Create a new Blob with the content
-    const blob = new Blob([content], { type: 'text/plain' });
-    
-    // Create a temporary anchor element
-    const link = document.createElement('a');
-    link.href = URL.createObjectURL(blob);
-    link.download = filename;
-    
-    // Append the link to the body (required for some browsers)
-    document.body.appendChild(link);
-    
-    // Trigger the download
-    link.click();
-    
-    // Clean up by removing the link and releasing the Blob URL
-    document.body.removeChild(link);
-    URL.revokeObjectURL(link.href);
-}
+    function saveToFile(filename, content) {
+        // Create a new Blob with the content
+        const blob = new Blob([content], { type: 'text/plain' });
+        
+        // Create a temporary anchor element
+        const link = document.createElement('a');
+        link.href = URL.createObjectURL(blob);
+        link.download = filename;
+        
+        // Append the link to the body (required for some browsers)
+        document.body.appendChild(link);
+        
+        // Trigger the download
+        link.click();
+        
+        // Clean up by removing the link and releasing the Blob URL
+        document.body.removeChild(link);
+        URL.revokeObjectURL(link.href);
+    }
 
-function loadItem(name: string, type: string) {
-    github.getFile(dir, name)
-    .then(filecontents => {
-        incoming_data = [type, filecontents];
-        subpage = "playground";
-    })
-}
+    function loadItem(name: string, type: string) {
+        github.getFile(dir, name)
+        .then(filecontents => {
+            // incoming_data = [type, filecontents];
+            // subpage = "playground";
 
-function downloadItem(name: string, type: string) {
-    github.getFile(dir, name)
-    .then(filecontents => {
-        saveToFile(name, filecontents)
-    })
-}
+            code = filecontents;
+            console.log(filecontents);
+            behavior("the_code", "show");
+        })
+    }
+
+    function downloadItem(name: string, type: string) {
+        github.getFile(dir, name)
+        .then(filecontents => {
+            saveToFile(name, filecontents)
+        })
+    }
 </script>
 
 <Container ui left aligned>
@@ -103,9 +115,9 @@ function downloadItem(name: string, type: string) {
                         </Extra>
                     </Content>
 
-                    <!-- <Button ui basic grey inverted icon style="position: absolute; top: 10px; right: 30px;" on:click={(event)=>{ loadItem(items[item_name].filename, items[item_name].type); }}>
-                        <Icon ui share/>
-                    </Button> -->
+                    <Button ui basic grey inverted icon style="position: absolute; bottom: 10px; right: 30px;" on:click={(event)=>{ loadItem(items[item_name].filename, items[item_name].type); }}>
+                        <Icon ui code/>
+                    </Button>
                     <Button ui basic grey inverted icon style="position: absolute; top: 10px; right: 30px;" on:click={(event)=>{ downloadItem(items[item_name].filename, items[item_name].type); }}>
                         <Icon ui download/>
                     </Button>
@@ -115,3 +127,18 @@ function downloadItem(name: string, type: string) {
         <Divider ui/>
     {/if}
 </Container>
+
+<Modal ui large id="the_code">
+    <div class="ui scrollable" id="codeDiv" style="text-align: left; height:{pageHeight}; overflow-y: auto; word-wrap: break-word;">
+        <pre style="text-align: left;">
+            {"\n"}{code}
+            <!-- {#if Object.keys(code).length !== 0}
+                {#if showJSON[0] === "json"}
+                    {JSON.stringify(code, null, 2)}
+                {:else}
+                    {yaml.dump(code)}
+                {/if}
+            {/if} -->
+        </pre>
+    </div>
+</Modal>

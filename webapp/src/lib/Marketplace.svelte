@@ -11,6 +11,7 @@
     import HowToDiagram from "./HowToDiagram.svelte";
     
     export let page = "start";
+    export let pageHeight = '600px';
 
     let subpage = "swarms";
     let incoming_data: [string, string] = ["json", ""];
@@ -54,13 +55,13 @@
     <Divider ui/>
 
     {#if subpage == "swarms"}
-        <MarketItems extension="swarm" dir="swarms" default_image={reality2swarm} bind:subpage bind:incoming_data/>
+        <MarketItems extension="swarm" dir="swarms" default_image={reality2swarm} bind:subpage bind:incoming_data {pageHeight}/>
     {:else if subpage == "bees"}
-        <MarketItems extension="bee" dir="bees" default_image={reality2bee} bind:subpage bind:incoming_data/>
+        <MarketItems extension="bee" dir="bees" default_image={reality2bee} bind:subpage bind:incoming_data {pageHeight}/>
     {:else if subpage == "antennae"}
-        <MarketItems extension="antenna" dir="antennae" default_image={reality2antennae} bind:subpage bind:incoming_data/>
+        <MarketItems extension="antenna" dir="antennae" default_image={reality2antennae} bind:subpage bind:incoming_data {pageHeight}/>
     {:else if subpage == "behaviours"}
-        <MarketItems extension="behaviour" dir="behaviours" default_image={reality2behaviours} bind:subpage bind:incoming_data/>
+        <MarketItems extension="behaviour" dir="behaviours" default_image={reality2behaviours} bind:subpage bind:incoming_data {pageHeight}/>
     {:else if subpage == "playground"}
         <div style="padding: 0px; position: relative;">
             <Construct bind:construct_command bind:savedState bind:variables  bind:incoming_data/>
