@@ -12,18 +12,18 @@
     <Column sixteen wide justified>
         <Divider ui/>
         <Text ui large>
-            The core of Reality2 is built on Sentient Digital Agents, or ‘Sentants,’ which are small, independent elements that can sense the digital and physical environments around them. These Sentants, also known as ‘Bees,’ can work together in ‘Swarms’ to achieve complex tasks.        </Text>
+            The core of Reality2 is built on Sentient Digital Agents, or ‘Sentants,’ which are small, independent entities that can sense the digital and physical environments around them. These Sentants, also known as ‘bumblebees,’ can work together in ‘Swarms’ to achieve complex tasks.        </Text>
     </Column>
     <Column sixteen wide justified>
         <Image ui src={theimage}/>
     </Column>
     <Column sixteen wide justified>
         <Text ui large>
-            Sentants can be programmed with specific ‘Behaviours’ and have their functionality extended using ‘Plugins’ or ‘Antennae,’ continuing the bee metaphor. A key principle is that data is stored close to its source (with encrypted backups elsewhere as needed). This means your data is literally ‘on you’—in the devices you wear and carry. But don’t worry, if you lose these devices, others won’t be able to access your personal information.
+            Sentants can be programmed with specific ‘Behaviours’ and have their functionality extended using ‘Plugins’ or ‘Antennae,’ continuing the bumblebee metaphor. A key principle is that data is stored close to its source (with encrypted backups elsewhere as needed). This means your data is literally ‘on you’ — in the devices you wear and carry. But don’t worry, if you misplace these devices, others won’t be able to access your personal information due to the encryption and contextual awareness.
         </Text>
         <Divider ui/>
         <Text ui large>
-            Each Sentant (or Bee) has a range of properties designed to both protect and simplify:
+            Each Sentant (or Bumblebee) has a range of properties designed to both protect and simplify:
             <ul style="line-height: 1.4;">
                 <li><strong>Immutable</strong>: Once created, its core cannot be changed.</li>
                 <li><strong>Programmable</strong>: It can be customized for specific tasks.</li>
