@@ -1,5 +1,6 @@
 <script lang="ts">
-    import { Container, Column, Text, Divider, Link } from "svelte-fomantic-ui";
+    import { Container, Column, Text, Divider, Link, Image } from "svelte-fomantic-ui";
+    import theimage from "../assets/objectsandactors.png";
 
     export let page = "start";
 </script>
@@ -13,7 +14,11 @@
         <Text ui large>
             Reality2 enhances wearable and stationary devices with Sentient Digital Agent intelligence, using contextual information to create adaptive, intuitive interactions. This approach simplifies usability and supports the ‘Objects and Actors Metaphor.’
         </Text>
-        <Divider ui/>
+    </Column>
+    <Column sixteen wide justified>
+        <Image ui src={theimage}/>
+    </Column>
+    <Column sixteen wide justified>
         <Text ui large>
             We humans naturally build <Link href="https://simplyputpsych.co.uk/psych-101-1/what-is-a-schema-in-psychology" target="_blank">mental frameworks</Link> to understand the complexities of the world around us. These simplified representations help us make sense of new information by drawing parallels with what we already know, often using metaphors. In the context of tools, these metaphors shape the <Link href="https://www.researchgate.net/publication/267487031_Metaphors_in_Conceptual_Design" target="_blank">interaction between designers and users</Link>.
         </Text>

@@ -1,6 +1,6 @@
 <script lang="ts">
-    import { Container, Column, Text, Divider } from "svelte-fomantic-ui";
-    import Link from "svelte-fomantic-ui/src/lib/elements/Link.svelte";
+    import { Container, Column, Text, Divider, Image } from "svelte-fomantic-ui";
+    import theimage from "../assets/digitalagents.png";
 
     export let page = "start";
 </script>
@@ -13,7 +13,11 @@
         <Divider ui/>
         <Text ui large>
             The core of Reality2 is built on Sentient Digital Agents, or ‘Sentants,’ which are small, independent elements that can sense the digital and physical environments around them. These Sentants, also known as ‘Bees,’ can work together in ‘Swarms’ to achieve complex tasks.        </Text>
-        <Divider ui/>
+    </Column>
+    <Column sixteen wide justified>
+        <Image ui src={theimage}/>
+    </Column>
+    <Column sixteen wide justified>
         <Text ui large>
             Sentants can be programmed with specific ‘Behaviours’ and have their functionality extended using ‘Plugins’ or ‘Antennae,’ continuing the bee metaphor. A key principle is that data is stored close to its source (with encrypted backups elsewhere as needed). This means your data is literally ‘on you’—in the devices you wear and carry. But don’t worry, if you lose these devices, others won’t be able to access your personal information.
         </Text>

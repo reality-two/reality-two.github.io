@@ -1,5 +1,6 @@
 <script lang="ts">
-    import { Container, Column, Text, Divider } from "svelte-fomantic-ui";
+    import { Container, Column, Text, Divider, Image } from "svelte-fomantic-ui";
+    import theimage from "../assets/networks.png";
 
     export let page = "start";
 </script>
@@ -13,7 +14,11 @@
         <Text ui large>
             Reality2 is built on existing hardware and software infrastructure protocols, but reuses these in unusual ways to simplify the user experience to build the Objects and Actors metaphor.
         </Text>
-        <Divider ui/>
+    </Column>
+    <Column sixteen wide justified>
+        <Image ui src={theimage}/>
+    </Column>
+    <Column sixteen wide justified>
         <Text ui large>
             Digital authentication is one of life’s complexities. In the physical world, authentication is often built into the interaction itself. For example, when I pick up a ball, I don’t need to prove I can throw it—I’ll either be able to do it or not. Similarly, when I approach a display screen, I should be able to start my presentation with a simple flick of the wrist, without needing to connect cables or find the WiFi password.
         </Text>
