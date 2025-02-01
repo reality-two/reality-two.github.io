@@ -342,8 +342,8 @@ Construct Swarms and Bees / Sentants
                                 putIntoBackpack(newCode);
                             }
                             else if (file.type.includes("yaml")) {
-                                var newCode = yaml.load(definition);
-                                putIntoBackpack(newCode);
+                                var newCode2 = yaml.load(definition);
+                                putIntoBackpack(newCode2);
                             }
                         }
                     }
@@ -379,8 +379,8 @@ Construct Swarms and Bees / Sentants
                 putIntoBackpack(newCode);
             }
             else if (incoming_data[0] == "yaml") {
-                var newCode = yaml.load(incoming_data[1]);
-                putIntoBackpack(newCode);
+                var newCode2 = yaml.load(incoming_data[1]);
+                putIntoBackpack(newCode2);
             }
             incoming_data = ["json", ""];
         }
